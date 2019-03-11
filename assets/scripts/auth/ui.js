@@ -34,6 +34,18 @@ const signInFailure = () => {
   resetMessage()
 }
 
+const changePasswordSuccess = () => {
+  $('#user-message').text('Password successfully changed!')
+  $('.auth-form').trigger('reset')
+  resetMessage()
+}
+
+const changePasswordFailure = () => {
+  $('#user-message').text('Password change failed')
+  $('.auth-form').trigger('reset')
+  resetMessage()
+}
+
 const signOutSuccess = () => {
   $('#user-message').text('Successfully Signed Out!')
   // reset all form info
@@ -53,6 +65,8 @@ module.exports = {
   signUpFailure,
   signInSuccess,
   signInFailure,
+  changePasswordSuccess,
+  changePasswordFailure,
   signOutSuccess,
   signOutFailure
 }
