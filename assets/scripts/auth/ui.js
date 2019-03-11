@@ -34,9 +34,25 @@ const signInFailure = () => {
   resetMessage()
 }
 
+const signOutSuccess = () => {
+  $('#user-message').text('Successfully Signed Out!')
+  // reset all form info
+  $('form').trigger('reset')
+  // reset the store info
+  store.user = null
+  resetMessage()
+}
+
+const signOutFailure = () => {
+  $('#user-message').text('Sign Out Failed')
+  resetMessage()
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure
+  signInFailure,
+  signOutSuccess,
+  signOutFailure
 }
