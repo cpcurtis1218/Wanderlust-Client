@@ -7,8 +7,12 @@
 // require('./example')
 
 const authEvents = require('./auth/events.js')
+const events = require('./events.js')
 
 $(() => {
+  // Project Forms
+  $('#add-location').on('submit', events.onAddLocation)
+  // Auth Forms
   $('#sign-up-form').on('submit', authEvents.onSignUp)
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#change-password-form').on('submit', authEvents.onChangePassword)
