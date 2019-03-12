@@ -11,8 +11,14 @@
     <p class="contact row m-0">
       <small>Contact:</small> {{destination.contact}}
     </p>
-    <button class="btn-primary" type="button" name="button">Update</button>
-    <button class="btn-danger" type="button" name="button">Delete</button>
+      <form class="update-form p-2">
+        <input type="text" name="destination[id]" class="d-none" value="{{destination.id}}">
+        <input required name="destination[location]" type="text" value="{{destination.location}}">
+        <input name="destination[note]" type="text" value="{{destination.note}}">
+        <input name="destination[contact]" type="text" value="{{destination.contact}}">
+        <button class="update-btn" type="submit">Update</button>
+      </form>
+    <!-- <button class="btn-danger" type="button" name="button">Delete</button> -->
   </section>
 
 {{/each}}
