@@ -1,6 +1,6 @@
 'use strict'
 
-const store = require('./store')
+// const store = require('./store')
 const showDestinationsTemplate = require('./templates/destinations-listing.handlebars')
 
 const resetMessage = function () {
@@ -21,8 +21,6 @@ const addLocationFailure = () => {
 
 const indexLocationsSuccess = (responseData) => {
   $('#resource-message').text('Showing Index')
-  store.destinations = responseData.destinations
-
   const showDestinationsHtml = showDestinationsTemplate({ destinations: responseData.destinations })
   $('.content').html('').html(showDestinationsHtml)
   resetMessage()
