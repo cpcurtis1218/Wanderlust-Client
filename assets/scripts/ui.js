@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('./store')
+const showDestinationsTemplate = require('./templates/destinations-listing.handlebars')
 
 const resetMessage = function () {
   setTimeout(() => {
@@ -22,6 +23,8 @@ const indexLocationsSuccess = (responseData) => {
   $('#resource-message').text('Showing Index')
   store.destinations = responseData.destinations
   console.log(store.destinations)
+  const showDestinationsHtml = showDestinationsTemplate({ destinations: responseData.destinations })
+  $('.content').append('').append(showDestinationsHtml)
   resetMessage()
 }
 
