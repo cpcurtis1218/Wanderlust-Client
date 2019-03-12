@@ -31,18 +31,18 @@ const indexLocations = () => {
   })
 }
 
-const updateBook = (id, location, note, contact) => {
+const updateBook = (data) => {
   return $.ajax({
-    url: config.apiUrl + '/destinations/' + id,
+    url: config.apiUrl + '/destinations/' + data.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
     data: {
       'destination': {
-        'location': `${location}`,
-        'note': `${note}`,
-        'contact': `${contact}`
+        'location': `${data.location}`,
+        'note': `${data.note}`,
+        'contact': `${data.contact}`
       }
     }
   })

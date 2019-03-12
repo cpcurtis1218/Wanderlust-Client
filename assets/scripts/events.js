@@ -28,10 +28,8 @@ const onUpdateDestination = (event) => {
   const form = event.target
   const formData = getFormFields(form)
   const destinationData = formData.destination
-  console.log(event)
-  console.log(formData)
 
-  api.updateBook(destinationData.id, destinationData.location, destinationData.note, destinationData.contact)
+  api.updateBook(destinationData)
     .then(
       $('#index-locations').click()
     )
