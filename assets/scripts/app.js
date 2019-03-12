@@ -13,6 +13,10 @@ $(() => {
   // Project Forms
   $('#add-location').on('submit', events.onAddLocation)
   $('#index-locations').on('submit', events.onIndexLocations)
+
+  // Destination Forms
+  events.addHandlers()
+
   // Auth Forms
   $('#sign-up-form').on('submit', authEvents.onSignUp)
   $('#sign-in-form').on('submit', authEvents.onSignIn)
