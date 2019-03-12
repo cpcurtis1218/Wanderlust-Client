@@ -25,6 +25,7 @@ const signInSuccess = (responseData) => {
   $('.auth-form').trigger('reset')
   // save the Token to the store
   store.user = responseData.user
+  console.log(store.user)
   resetMessage()
 }
 
