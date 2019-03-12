@@ -11,8 +11,8 @@ const events = require('./events.js')
 
 $(() => {
   // Project Forms
-  $('#log-store').on('submit', events.onLogStore)
   $('#add-location').on('submit', events.onAddLocation)
+  $('#index-locations').on('submit', events.onIndexLocations)
   // Auth Forms
   $('#sign-up-form').on('submit', authEvents.onSignUp)
   $('#sign-in-form').on('submit', authEvents.onSignIn)

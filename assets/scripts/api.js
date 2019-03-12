@@ -21,6 +21,17 @@ const addLocation = (location, note, contact) => {
   })
 }
 
+const indexLocations = () => {
+  return $.ajax({
+    url: config.apiUrl + '/destinations',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
-  addLocation
+  addLocation,
+  indexLocations
 }

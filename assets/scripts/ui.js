@@ -8,10 +8,6 @@ const resetMessage = function () {
   }, 5000)
 }
 
-const logStore = () => {
-  console.log(store)
-}
-
 const addLocationSuccess = () => {
   $('#resource-message').text('Location Added!')
   resetMessage()
@@ -22,8 +18,22 @@ const addLocationFailure = () => {
   resetMessage()
 }
 
+const indexLocationsSuccess = (responseData) => {
+  $('#resource-message').text('Showing Index')
+  store.destinations = responseData.destinations
+  console.log(store.destinations)
+  resetMessage()
+}
+
+const indexLocationsFailure = (responseData) => {
+  $('#resource-message').text('Something Went Wrong!')
+  console.log('error response data is ' + responseData)
+  resetMessage()
+}
+
 module.exports = {
-  logStore,
   addLocationSuccess,
-  addLocationFailure
+  addLocationFailure,
+  indexLocationsSuccess,
+  indexLocationsFailure
 }
