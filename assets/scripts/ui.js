@@ -32,9 +32,22 @@ const indexLocationsFailure = (responseData) => {
   resetMessage()
 }
 
+const updateDestinationSuccess = () => {
+  $('#resource-message').text('Update Successful!')
+  resetMessage()
+}
+
+const updateDestinationFailure = (responseData) => {
+  $('#resource-message').text('Something Went Wrong!')
+  console.log('error response data is ' + responseData)
+  resetMessage()
+}
+
 module.exports = {
   addLocationSuccess,
   addLocationFailure,
   indexLocationsSuccess,
-  indexLocationsFailure
+  indexLocationsFailure,
+  updateDestinationSuccess,
+  updateDestinationFailure
 }

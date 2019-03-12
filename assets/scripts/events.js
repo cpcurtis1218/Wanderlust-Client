@@ -30,10 +30,8 @@ const onUpdateDestination = (event) => {
   const destinationData = formData.destination
 
   api.updateBook(destinationData)
-    .then(
-      $('#index-locations').click()
-    )
-    .catch(ui.indexLocationsFailure)
+    .then(ui.updateDestinationSuccess)
+    .catch(ui.updateDestinationFailure)
 }
 
 const addHandlers = () => {
