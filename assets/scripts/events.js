@@ -23,7 +23,27 @@ const onIndexLocations = (event) => {
     .catch(ui.indexLocationsFailure)
 }
 
+const onUpdateDestination = (event) => {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+  const destinationData = formData.destination
+  console.log(event)
+  console.log(formData)
+
+  api.updateBook(destinationData.id, destinationData.location, destinationData.note, destinationData.contact)
+    .then(
+      $('#index-locations').click()
+    )
+    .catch(ui.indexLocationsFailure)
+}
+
+const addHandlers = () => {
+  $('#content').on('submit', '.update-form', onUpdateDestination)
+}
+
 module.exports = {
   onAddLocation,
-  onIndexLocations
+  onIndexLocations,
+  addHandlers
 }
