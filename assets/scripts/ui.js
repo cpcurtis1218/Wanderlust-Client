@@ -2,17 +2,17 @@
 
 const resetMessage = function () {
   setTimeout(() => {
-    $('#user-message').text('Try Something New!')
-  }, 3000)
+    $('#resource-message').text('Click Something Else!')
+  }, 5000)
 }
 
 const addLocationSuccess = () => {
-  $('#user-message').text('Location Added!')
+  $('#resource-message').text('Location Added!')
   resetMessage()
 }
 
 const addLocationFailure = () => {
-  $('#user-message').text('Something went wrong.')
+  $('#resource-message').text('Something went wrong.')
   resetMessage()
 }
 
