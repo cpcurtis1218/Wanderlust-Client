@@ -23,6 +23,8 @@ const signUpFailure = () => {
 const signInSuccess = (responseData) => {
   $('#user-message').text('Successfully signed in!')
   $('.auth-form').trigger('reset')
+  $('.unsecure').hide()
+  $('.secure').show()
   // save the Token to the store
   store.user = responseData.user
   resetMessage()
