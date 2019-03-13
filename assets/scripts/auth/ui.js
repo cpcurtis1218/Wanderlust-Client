@@ -52,6 +52,8 @@ const signOutSuccess = () => {
   $('#user-message').text('Successfully Signed Out!')
   // reset all form info
   $('form').trigger('reset')
+  $('.unsecure').show()
+  $('.secure').hide()
   // reset the store info
   store.user = null
   resetMessage()
