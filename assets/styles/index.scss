@@ -1,5 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 
+button {
+  border-radius: 10px;
+}
+
 .auth-area {
   display: flex;
 }

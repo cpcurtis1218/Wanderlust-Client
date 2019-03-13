@@ -11,17 +11,28 @@
     <p class="contact row m-0">
       <small>Contact:</small> {{destination.contact}}
     </p>
-      <form class="update-form p-2">
-        <input type="text" name="destination[id]" class="d-none" value="{{destination.id}}">
-        <input required name="destination[location]" type="text" value="{{destination.location}}">
-        <input name="destination[note]" type="text" value="{{destination.note}}">
-        <input name="destination[contact]" type="text" value="{{destination.contact}}">
-        <button class="update-btn" type="submit">Update</button>
-      </form>
-      <form class="delete-form p-2">
-        <input type="text" name="destination[id]" class="d-none" value="{{destination.id}}">
-        <button class="delete-btn btn-danger" type="submit">Delete</button>
-      </form>
+    <div class="d-flex">
+      <div class="dropdown pt-2">
+        <button class="dropdown-toggle btn-secondary" type="button" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Update
+        </button>
+        <div class="dropdown-menu">
+          <form class="update-form p-2">
+            <input type="text" name="destination[id]" class="d-none" value="{{destination.id}}">
+            <input class="dropdown-item" required name="destination[location]" type="text" value="{{destination.location}}">
+            <input class="dropdown-item" name="destination[note]" type="text" value="{{destination.note}}">
+            <input class="dropdown-item" name="destination[contact]" type="text" value="{{destination.contact}}">
+            <button class="update-btn" type="submit">Update</button>
+          </form>
+        </div>
+      </div>
+      <div class="">
+        <form class="delete-form p-2">
+          <input type="text" name="destination[id]" class="d-none" value="{{destination.id}}">
+          <button class="delete-btn btn-danger" type="submit">Delete</button>
+        </form>
+      </div>
+    </div>
     <!-- <button class="btn-danger" type="button" name="button">Delete</button> -->
   </section>
 
