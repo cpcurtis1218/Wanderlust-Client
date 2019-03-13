@@ -13,12 +13,14 @@
     </head>
     <body>
       <nav class="navbar sticky-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Project Two Client</a>
+        <a class="navbar-brand mr-0" href="#">Project Two Client</a>
+        <div class="nav-item user-message" id="user-message"></div>
+        <div class="nav-item auth-area">
           <div class="unsecure nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Sign Up
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-right" aria-labelledby="navbarDropdown">
               <form id="sign-up-form" class="auth-form">
                 <input class="dropdown-item" name="credentials[email]" type="email" placeholder="email">
                 <input class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
@@ -56,11 +58,11 @@
               <input type="submit" value="Sign Out">
             </form>
           </div>
+        </div>
       </nav>
-    <div class="message" id="user-message"></div>
       <main>
         <section>
-          <div class="message" id="resource-message"></div>
+          <div class="resource-message" id="resource-message"></div>
           <form id="add-location" class="">
             <input name="location" type="text" placeholder="Location">
             <input name="note" type="text" placeholder="Note">

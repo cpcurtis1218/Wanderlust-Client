@@ -1,9 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 
-// main {
-//   margin-top: 20%;
-// }
+.auth-area {
+  display: flex;
+}
 
-.message {
-  height: 2rem;
+.user-message {
+  color: yellow;
 }
