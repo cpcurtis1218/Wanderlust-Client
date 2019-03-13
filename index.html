@@ -41,14 +41,23 @@
               </form>
             </div>
           </div>
-          <form id="change-password-form" class="auth-form">
-            <input required type="password" name="passwords[old]" placeholder="current password">
-            <input required type="password" name="passwords[new]" placeholder="new password">
-            <input type="submit" value="Change Password">
-          </form>
-          <form id="sign-out">
-            <input type="submit" value="Sign Out">
-          </form>
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Change Password
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <form id="change-password-form" class="auth-form">
+                <input class="dropdown-item" required type="password" name="passwords[old]" placeholder="current password">
+                <input class="dropdown-item" required type="password" name="passwords[new]" placeholder="new password">
+                <input class="dropdown-item" type="submit" value="Change Password">
+              </form>
+            </div>
+          </div>
+          <div class="nav-item">
+            <form id="sign-out">
+              <input type="submit" value="Sign Out">
+            </form>
+          </div>
         <!-- </section> -->
       </nav>
       <main>
