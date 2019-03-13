@@ -48,8 +48,19 @@ const updateDestination = (data) => {
   })
 }
 
+const deleteDestination = data => {
+  return $.ajax({
+    url: config.apiUrl + '/destinations/' + data.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   addLocation,
   indexLocations,
-  updateDestination
+  updateDestination,
+  deleteDestination
 }
