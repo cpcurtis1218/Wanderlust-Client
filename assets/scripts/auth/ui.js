@@ -62,6 +62,8 @@ const signOutSuccess = () => {
   $('.secure').hide()
   // hide destinations
   $('.destinations').hide()
+  // clear destination index container
+  $('.content').html('')
   // reset the store info
   store.user = null
   resetMessage()
