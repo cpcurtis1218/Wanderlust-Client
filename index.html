@@ -61,18 +61,27 @@
         </div>
       </nav>
       <main>
-        <section class="destinations">
-          <div class="resource-message" id="resource-message"></div>
-          <form id="add-location" class="">
-            <input name="location" type="text" placeholder="Location">
-            <input name="note" type="text" placeholder="Note">
-            <input name="contact" type="text" placeholder="Contact">
-            <input type="submit" value="Add Location">
-          </form>
-          <form id="index-locations">
-            <input type="submit" value="Index">
-          </form>
-        </section>
+        <div class="destinations list-group">
+          <div class="dropright">
+            <a class="list-group-item dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Add Destination
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <form id="add-location" class="">
+                <input class="dropdown-item" name="location" type="text" placeholder="Location">
+                <input class="dropdown-item" name="note" type="text" placeholder="Note">
+                <input class="dropdown-item" name="contact" type="text" placeholder="Contact">
+                <input class="dropdown-item" type="submit" value="Add Location">
+              </form>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <form id="index-locations">
+              <input type="submit" value="Index">
+            </form>
+          </div>
+          <div class="resource-message list-group-item" id="resource-message"></div>
+        </div>
         <section class="destinations container">
           <div class="content row" id="content">
           </div>
