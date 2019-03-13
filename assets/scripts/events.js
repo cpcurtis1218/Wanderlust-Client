@@ -34,8 +34,21 @@ const onUpdateDestination = (event) => {
     .catch(ui.updateDestinationFailure)
 }
 
+const onDeleteDestination = (event) => {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+  const destinationData = formData.destination
+  console.log(destinationData)
+
+  api.deleteDestination(destinationData)
+    .then(ui)
+    .catch(ui)
+}
+
 const addHandlers = () => {
   $('#content').on('submit', '.update-form', onUpdateDestination)
+  $('#content').on('submit', '.delete-form', onDeleteDestination)
 }
 
 module.exports = {
