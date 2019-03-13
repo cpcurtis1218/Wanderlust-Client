@@ -4,6 +4,16 @@
   display: flex;
 }
 
+.container {
+  float: right;
+  width: 70%;
+}
+
+.dest-area {
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
 .dropdown-item {
   padding: 1;
 }
@@ -14,12 +24,14 @@
 }
 
 .list-group {
+  position: fixed;
   width: 25%;
 }
 
 .list-group-item {
   border-radius: 0;
   height: 3.5rem;
+  width: 100%;
 }
 
 .nav-link {

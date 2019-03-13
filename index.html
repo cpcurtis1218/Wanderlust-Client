@@ -12,7 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <nav class="navbar sticky-top navbar-dark bg-dark">
+      <nav class="navbar navbar-default navbar-static-top navbar-dark bg-dark">
         <a class="navbar-brand mr-0" href="#">Project Two Client</a>
         <div class="nav-item user-message" id="user-message"></div>
         <div class="nav-item auth-area pr-3 btn-group">
@@ -61,11 +61,19 @@
         </div>
       </nav>
       <main>
-        <div class="destinations list-group">
-          <div class="dropright">
-            <a class="list-group-item dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <section class="destinations container">
+          <div class="content row" id="content">
+          </div>
+        </section>
+        <section class="destinations list-group">
+          <div class="resource-message list-group-item" id="resource-message"></div>
+          <form id="index-locations">
+            <input class="list-group-item" type="submit" value="My Destinations">
+          </form>
+          <div class="dropdown">
+            <button class="list-group-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Add Destination
-            </a>
+            </button>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <form id="add-location" class="">
                 <input class="dropdown-item" name="location" type="text" placeholder="Location">
@@ -74,16 +82,6 @@
                 <input class="dropdown-item" type="submit" value="Add Location">
               </form>
             </div>
-          </div>
-          <div class="list-group-item">
-            <form id="index-locations">
-              <input type="submit" value="Index">
-            </form>
-          </div>
-          <div class="resource-message list-group-item" id="resource-message"></div>
-        </div>
-        <section class="destinations container">
-          <div class="content row" id="content">
           </div>
         </section>
       </main>
