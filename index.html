@@ -14,7 +14,7 @@
     <body>
       <nav class="navbar sticky-top navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Project Two Client</a>
-        <section>
+        <!-- <section> -->
           <div class="message" id="user-message"></div>
           <div class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -29,11 +29,18 @@
               </form>
             </div>
           </div>
-          <form id="sign-in-form" class="auth-form">
-            <input type="email" name="credentials[email]" placeholder="email">
-            <input name="credentials[password]" type="password" placeholder="password">
-            <input type="submit" value="Sign In">
-          </form>
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sign In
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <form id="sign-in-form" class="auth-form">
+                <input class="dropdown-item" type="email" name="credentials[email]" placeholder="email">
+                <input class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
+                <input class="dropdown-item" type="submit" value="Sign In">
+              </form>
+            </div>
+          </div>
           <form id="change-password-form" class="auth-form">
             <input required type="password" name="passwords[old]" placeholder="current password">
             <input required type="password" name="passwords[new]" placeholder="new password">
@@ -42,7 +49,7 @@
           <form id="sign-out">
             <input type="submit" value="Sign Out">
           </form>
-        </section>
+        <!-- </section> -->
       </nav>
       <main>
         <section>
