@@ -4,23 +4,23 @@ const getFormFields = require('../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
-const onAddLocation = (event) => {
-  event.preventDefault()
-  const form = event.target
-  const formData = getFormFields(form)
-  console.log(formData)
-
-  api.addLocation(formData.location, formData.note, formData.contact)
-    .then(ui.addLocationSuccess)
-    .catch(ui.addLocationFailure)
-}
-
 const onIndexLocations = (event) => {
-  event.preventDefault()
+  if (event) { event.preventDefault() }
 
   api.indexLocations()
     .then(ui.indexLocationsSuccess)
     .catch(ui.indexLocationsFailure)
+}
+
+const onAddLocation = (event) => {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+
+  api.addLocation(formData.location, formData.note, formData.contact)
+    .then(ui.addLocationSuccess)
+    .then(onIndexLocations)
+    .catch(ui.addLocationFailure)
 }
 
 const onUpdateDestination = (event) => {
@@ -31,6 +31,7 @@ const onUpdateDestination = (event) => {
 
   api.updateDestination(destinationData)
     .then(ui.updateDestinationSuccess)
+    .then(onIndexLocations)
     .catch(ui.updateDestinationFailure)
 }
 
@@ -39,10 +40,10 @@ const onDeleteDestination = (event) => {
   const form = event.target
   const formData = getFormFields(form)
   const destinationData = formData.destination
-  console.log(destinationData)
 
   api.deleteDestination(destinationData)
     .then(ui.deleteDestinationSuccess)
+    .then(onIndexLocations)
     .catch(ui.deleteDestinationFailure)
 }
 
