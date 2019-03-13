@@ -15,12 +15,12 @@
       <nav class="navbar sticky-top navbar-dark bg-dark">
         <a class="navbar-brand mr-0" href="#">Project Two Client</a>
         <div class="nav-item user-message" id="user-message"></div>
-        <div class="nav-item auth-area">
-          <div class="unsecure nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="nav-item auth-area pr-3 btn-group">
+          <div class="unsecure dropdown m-1">
+            <a class="nav-link dropdown-toggle btn-warning" href="#" id="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Sign Up
             </a>
-            <div class="dropdown-menu dropdown-right" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <form id="sign-up-form" class="auth-form">
                 <input class="dropdown-item" name="credentials[email]" type="email" placeholder="email">
                 <input class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
@@ -29,11 +29,11 @@
               </form>
             </div>
           </div>
-          <div class="unsecure nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="unsecure dropdown m-1">
+            <a class="nav-link dropdown-toggle btn-warning" href="#" id="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Sign In
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <form id="sign-in-form" class="auth-form">
                 <input class="dropdown-item" type="email" name="credentials[email]" placeholder="email">
                 <input class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
@@ -41,11 +41,11 @@
               </form>
             </div>
           </div>
-          <div class="secure nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="secure dropdown m-1">
+            <a class="nav-link dropdown-toggle btn-warning" href="#" id="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Change Password
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <form id="change-password-form" class="auth-form">
                 <input class="dropdown-item" required type="password" name="passwords[old]" placeholder="current password">
                 <input class="dropdown-item" required type="password" name="passwords[new]" placeholder="new password">
@@ -53,9 +53,9 @@
               </form>
             </div>
           </div>
-          <div class="secure nav-item">
+          <div class="secure m-1">
             <form id="sign-out">
-              <input type="submit" value="Sign Out">
+              <input class="sign-out-button btn-danger nav-link" type="submit" value="Sign Out">
             </form>
           </div>
         </div>

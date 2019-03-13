@@ -4,6 +4,19 @@
   display: flex;
 }
 
+.dropdown-item {
+  padding: 1;
+}
+
+.dropdown-toggle,
+.sign-out-button {
+  border-radius: 10px;
+}
+
+.nav-link {
+  color: #343a40;
+}
+
 .user-message {
   color: yellow;
 }
