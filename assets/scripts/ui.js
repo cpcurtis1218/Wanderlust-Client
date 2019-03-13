@@ -39,7 +39,17 @@ const updateDestinationSuccess = () => {
 
 const updateDestinationFailure = (responseData) => {
   $('#resource-message').text('Something Went Wrong!')
-  console.log('error response data is ' + responseData)
+  console.log(responseData)
+  resetMessage()
+}
+
+const deleteDestinationSuccess = () => {
+  $('#resource-message').text('Delete Successful!')
+}
+
+const deleteDestinationFailure = (responseData) => {
+  $('#resource-message').text('Something Went Wrong!')
+  console.log(responseData)
   resetMessage()
 }
 
@@ -49,5 +59,7 @@ module.exports = {
   indexLocationsSuccess,
   indexLocationsFailure,
   updateDestinationSuccess,
-  updateDestinationFailure
+  updateDestinationFailure,
+  deleteDestinationSuccess,
+  deleteDestinationFailure
 }

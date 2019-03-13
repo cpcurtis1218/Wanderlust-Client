@@ -42,8 +42,8 @@ const onDeleteDestination = (event) => {
   console.log(destinationData)
 
   api.deleteDestination(destinationData)
-    .then(ui)
-    .catch(ui)
+    .then(ui.deleteDestinationSuccess)
+    .catch(ui.deleteDestinationFailure)
 }
 
 const addHandlers = () => {
