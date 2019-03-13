@@ -13,6 +13,7 @@ $(() => {
   // Project Forms
   $('#add-location').on('submit', events.onAddLocation)
   $('#index-locations').on('submit', events.onIndexLocations)
+  $('.destinations').hide()
 
   // Destination Forms
   events.addHandlers()

@@ -23,8 +23,12 @@ const signUpFailure = () => {
 const signInSuccess = (responseData) => {
   $('#user-message').text('Successfully signed in!')
   $('.auth-form').trigger('reset')
+  // hide sign in and sign up
   $('.unsecure').hide()
+  // show change-pw and sign out
   $('.secure').show()
+  // show destination info
+  $('.destinations').show()
   // save the Token to the store
   store.user = responseData.user
   resetMessage()
@@ -52,8 +56,12 @@ const signOutSuccess = () => {
   $('#user-message').text('Successfully Signed Out!')
   // reset all form info
   $('form').trigger('reset')
+  // show sign in and sign up
   $('.unsecure').show()
+  // hide change pw and sign out
   $('.secure').hide()
+  // hide destinations
+  $('.destinations').hide()
   // reset the store info
   store.user = null
   resetMessage()
