@@ -22,9 +22,9 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <form id="sign-up-form" class="auth-form">
-                <input class="dropdown-item" name="credentials[email]" type="email" placeholder="email">
-                <input class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
-                <input class="dropdown-item" name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
+                <input class="dropdown-item" required name="credentials[email]" type="email" placeholder="email">
+                <input class="dropdown-item" required name="credentials[password]" type="password" placeholder="password">
+                <input class="dropdown-item" required name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
                 <input class="dropdown-item" type="submit" value="Sign Up">
               </form>
             </div>
@@ -35,8 +35,8 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <form id="sign-in-form" class="auth-form">
-                <input class="dropdown-item" type="email" name="credentials[email]" placeholder="email">
-                <input class="dropdown-item" name="credentials[password]" type="password" placeholder="password">
+                <input class="dropdown-item" required type="email" name="credentials[email]" placeholder="email">
+                <input class="dropdown-item" required name="credentials[password]" type="password" placeholder="password">
                 <input class="dropdown-item" type="submit" value="Sign In">
               </form>
             </div>
@@ -76,7 +76,7 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <form id="add-location" class="">
-                <input class="dropdown-item" name="location" type="text" placeholder="Location">
+                <input required class="dropdown-item" name="location" type="text" placeholder="Location">
                 <input class="dropdown-item" name="note" type="text" placeholder="Note">
                 <input class="dropdown-item" name="contact" type="text" placeholder="Contact">
                 <input class="dropdown-item" type="submit" value="Add Location">

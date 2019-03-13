@@ -4,6 +4,10 @@ button {
   border-radius: 10px;
 }
 
+small {
+  text-align: right;
+}
+
 .auth-area {
   display: flex;
 }
@@ -16,6 +20,15 @@ button {
 .dest-area {
   border: 1px solid grey;
   border-radius: 4px;
+}
+
+.dest-info {
+  font-size: 1.2rem;
+}
+
+.dest-label {
+  color: green;
+  justify-content: center;
 }
 
 .dropdown-item {
