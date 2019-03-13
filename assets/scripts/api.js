@@ -31,7 +31,7 @@ const indexLocations = () => {
   })
 }
 
-const updateBook = (data) => {
+const updateDestination = (data) => {
   return $.ajax({
     url: config.apiUrl + '/destinations/' + data.id,
     method: 'PATCH',
@@ -51,5 +51,5 @@ const updateBook = (data) => {
 module.exports = {
   addLocation,
   indexLocations,
-  updateBook
+  updateDestination
 }

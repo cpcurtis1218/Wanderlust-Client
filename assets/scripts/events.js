@@ -29,7 +29,7 @@ const onUpdateDestination = (event) => {
   const formData = getFormFields(form)
   const destinationData = formData.destination
 
-  api.updateBook(destinationData)
+  api.updateDestination(destinationData)
     .then(ui.updateDestinationSuccess)
     .catch(ui.updateDestinationFailure)
 }
