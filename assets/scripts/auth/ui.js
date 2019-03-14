@@ -9,19 +9,19 @@ const resetMessage = function () {
 }
 
 const signUpSuccess = () => {
-  $('#user-message').text('Successfully created an account!')
+  $('#user-message').text(`You've created an account!`)
   $('.auth-form').trigger('reset')
   resetMessage()
 }
 
 const signUpFailure = () => {
-  $('#user-message').text('Sign up failed')
+  $('#user-message').text('Sign up failed.')
   $('.auth-form').trigger('reset')
   resetMessage()
 }
 
 const signInSuccess = (responseData) => {
-  $('#user-message').text('Successfully signed in!')
+  $('#user-message').text(`You've signed in!`)
   $('.auth-form').trigger('reset')
   // hide sign in and sign up
   $('.unsecure').hide()
@@ -35,25 +35,25 @@ const signInSuccess = (responseData) => {
 }
 
 const signInFailure = () => {
-  $('#user-message').text('Sign in failed')
+  $('#user-message').text('Sign in failed.')
   $('.auth-form').trigger('reset')
   resetMessage()
 }
 
 const changePasswordSuccess = () => {
-  $('#user-message').text('Password successfully changed!')
+  $('#user-message').text(`You've changed passwords!`)
   $('.auth-form').trigger('reset')
   resetMessage()
 }
 
 const changePasswordFailure = () => {
-  $('#user-message').text('Password change failed')
+  $('#user-message').text('Password change failed.')
   $('.auth-form').trigger('reset')
   resetMessage()
 }
 
 const signOutSuccess = () => {
-  $('#user-message').text('Successfully Signed Out!')
+  $('#user-message').text(`You've signed out!`)
   // reset all form info
   $('form').trigger('reset')
   // show sign in and sign up
@@ -70,7 +70,7 @@ const signOutSuccess = () => {
 }
 
 const signOutFailure = () => {
-  $('#user-message').text('Sign Out Failed')
+  $('#user-message').text('Sign out failed.')
   resetMessage()
 }
 
