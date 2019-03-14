@@ -81,9 +81,12 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <form id="add-location" class="">
-                <input required class="dropdown-item" name="location" type="text" placeholder="Location">
-                <input class="dropdown-item" name="note" type="text" placeholder="Note">
-                <input class="dropdown-item" name="contact" type="text" placeholder="Contact">
+                <label for="new-location"><small>Location</small></label>
+                <input required class="dropdown-item" id="new-location" name="location" type="text" placeholder="Location">
+                <label for="new-note"><small>Note</small></label>
+                <input class="dropdown-item" id="new-note" name="note" type="text" placeholder="Note">
+                <label for="new-contact"><small>Contact</small></label>
+                <input class="dropdown-item" id="new-contact" name="contact" type="text" placeholder="Contact">
                 <input class="dropdown-item dd-btn" type="submit" value="Add Location">
               </form>
             </div>
