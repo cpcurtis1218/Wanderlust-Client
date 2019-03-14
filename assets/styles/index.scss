@@ -5,7 +5,8 @@ $yellow-ish: #ffcc4c;
 $red-ish: #ff734c;
 
 body {
-  background: $red-ish;
+  background: url('public/travel.jpg');
+  background-size: cover;
 }
 
 button {
