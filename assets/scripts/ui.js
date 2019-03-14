@@ -5,7 +5,7 @@ const showDestinationsTemplate = require('./templates/destinations-listing.handl
 
 const resetMessage = function () {
   setTimeout(() => {
-    $('#resource-message').text('Click Something Else!')
+    $('#resource-message').text('')
   }, 5000)
 }
 
@@ -21,6 +21,12 @@ const addLocationFailure = () => {
 
 const indexLocationsSuccess = (responseData) => {
   $('#resource-message').text('Showing Index')
+  const showDestinationsHtml = showDestinationsTemplate({ destinations: responseData.destinations })
+  $('.content').html('').html(showDestinationsHtml)
+  resetMessage()
+}
+
+const updateLocationsSuccess = (responseData) => {
   const showDestinationsHtml = showDestinationsTemplate({ destinations: responseData.destinations })
   $('.content').html('').html(showDestinationsHtml)
   resetMessage()
@@ -57,6 +63,7 @@ module.exports = {
   addLocationSuccess,
   addLocationFailure,
   indexLocationsSuccess,
+  updateLocationsSuccess,
   indexLocationsFailure,
   updateDestinationSuccess,
   updateDestinationFailure,

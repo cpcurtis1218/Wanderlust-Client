@@ -5,11 +5,17 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 
 const onIndexLocations = (event) => {
-  if (event) { event.preventDefault() }
+  if (event) {
+    event.preventDefault()
 
-  api.indexLocations()
-    .then(ui.indexLocationsSuccess)
-    .catch(ui.indexLocationsFailure)
+    api.indexLocations()
+      .then(ui.indexLocationsSuccess)
+      .catch(ui.indexLocationsFailure)
+  } else {
+    api.indexLocations()
+      .then(ui.updateLocationsSuccess)
+      .catch(ui.indexLocationsFailure)
+  }
 }
 
 const onAddLocation = (event) => {
