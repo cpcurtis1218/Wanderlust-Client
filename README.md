@@ -1,9 +1,9 @@
 # Wanderlust
 
+Also view the backend repo [here](https://github.com/cpcurtis1218/Project-Two-API).
 
 ## Technologies Used
 In creating this application I used HTML, SCSS, javaScript, Bootstrap, jQuery, AJAX, and Handlebars.
-
 
 ## Planning and Execution
 When first planning my application I created the wireframe and about a dozen user stories.  Once I felt good about the layout i built the API.  Once the API was completed I worked on the front-end functionality.  Once I was satisfied with the behaviors of the front-end I completed the styling.
