@@ -3,7 +3,7 @@
 const config = require('./config.js')
 const store = require('./store.js')
 
-const addLocation = (location, note, contact) => {
+const addLocation = (data) => {
   return $.ajax({
     url: config.apiUrl + '/destinations',
     method: 'POST',
@@ -12,9 +12,9 @@ const addLocation = (location, note, contact) => {
     },
     data: {
       'destination': {
-        'location': `${location}`,
-        'note': `${note}`,
-        'contact': `${contact}`
+        'location': `${data.location}`,
+        'note': `${data.note}`,
+        'contact': `${data.contact}`
       }
     },
     dataType: 'json'
