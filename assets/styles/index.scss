@@ -134,6 +134,15 @@ small {
 
 .welcome {
   color: $yellow-ish;
+  font-family: arial;
+  font-size: 2em;
+  font-weight: bold;
+  -moz-text-fill-color: $yellow-ish;
+  -webkit-text-fill-color: $yellow-ish;
+  -moz-text-stroke-color: $blue-ish;
+  -webkit-text-stroke-color: $blue-ish;
+  -moz-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1px;
   width: 100vw;
 }
 
