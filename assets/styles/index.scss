@@ -23,11 +23,12 @@ small {
 }
 
 .dd-btn {
-  background-color: yellow;
+  background-color: #ffc107;
   color: #343a40;
 
-  &hover {
-    background-color: white;
+  &:hover {
+    background-color: #343a40;
+    color: #ffc107;
   }
 }
 
@@ -65,12 +66,12 @@ small {
 
 .list-group {
   position: fixed;
-  width: 25%;
+  width: 20%;
 }
 
 .list-group-item {
   border-radius: 0;
-  height: 3.5rem;
+  height: 3.5em;
   width: 100%;
 }
 
@@ -79,5 +80,5 @@ small {
 }
 
 .user-message {
-  color: yellow;
+  color: #ffc107;
 }
