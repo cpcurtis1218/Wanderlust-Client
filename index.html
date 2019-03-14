@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Project Two Client</title>
+      <title>Wanderlust</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,12 +12,12 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <nav class="navbar navbar-default navbar-static-top navbar-dark bg-dark">
-        <a class="navbar-brand mr-0" href="#">Project Two Client</a>
+      <nav class="navbar navbar-default navbar-static-top navbar-dark">
+        <a class="navbar-brand mr-0" href="#"><h3>Wanderlust</h3></a>
         <div class="nav-item user-message" id="user-message"></div>
         <div class="nav-item auth-area pr-3 btn-group">
           <div class="unsecure dropdown m-1">
-            <a class="nav-link dropdown-toggle btn-warning" href="#" id="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle btn-warning" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Sign Up
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="unsecure dropdown m-1">
-            <a class="nav-link dropdown-toggle btn-warning" href="#" id="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle btn-warning" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Sign In
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -42,7 +42,7 @@
             </div>
           </div>
           <div class="secure dropdown m-1">
-            <a class="nav-link dropdown-toggle btn-warning" href="#" id="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle btn-warning" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Change Password
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -55,18 +55,23 @@
           </div>
           <div class="secure m-1">
             <form id="sign-out">
-              <input class="sign-out-button btn-danger nav-link" type="submit" value="Sign Out">
+              <input class="sign-out-button btn-danger nav-link" id="sign-out-btn" type="submit" value="Sign Out">
             </form>
           </div>
         </div>
       </nav>
       <main>
+        <div class="container">
+          <div class="row mt-2">
+            <h5 class="welcome col-6 top-message">Welcome to Wanderlust!</h5>
+            <h5 class="resource-message col-6 top-message" id="resource-message"></h5>
+          </div>
+        </div>
         <section class="destinations container">
           <div class="content row" id="content">
           </div>
         </section>
         <section class="destinations list-group">
-          <div class="resource-message list-group-item" id="resource-message"></div>
           <form id="index-locations">
             <input class="list-group-item" type="submit" value="My Destinations">
           </form>

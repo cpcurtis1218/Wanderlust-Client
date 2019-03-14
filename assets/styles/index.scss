@@ -1,5 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
 
+$blue-ish: #4c6dff;
+$yellow-ish: #ffcc4c;
+$red-ish: #ff734c;
+
+body {
+  background: $red-ish;
+}
+
 button {
   border-radius: 10px;
 }
@@ -12,27 +20,37 @@ small {
   display: flex;
 }
 
+.btn-danger {
+  border-radius: 10px;
+}
+
+.btn-outline-danger {
+  border-radius: 5px;
+}
+
+.destinations {
+  float: right;
+  margin: 2vw;
+  width: 70vw;
+}
+
 .dest-btns {
   justify-content: space-between;
   align-items: center;
 }
 
-.container {
-  float: right;
-  width: 70%;
-}
-
 .dd-btn {
-  background-color: #ffc107;
-  color: #343a40;
+  background-color: $yellow-ish;
+  color: $blue-ish;
 
   &:hover {
-    background-color: #343a40;
-    color: #ffc107;
+    background-color: $blue-ish;
+    color: $yellow-ish;
   }
 }
 
 .dest-area {
+  background-color: white;
   border: 1px solid grey;
   border-radius: 4px;
 }
@@ -42,7 +60,7 @@ small {
 }
 
 .dest-label {
-  color: green;
+  color: $blue-ish;
   justify-content: center;
 }
 
@@ -53,10 +71,15 @@ small {
   padding: .5em;
 }
 
-.dropdown-toggle,
-.sign-out-button,
-.delete-btn {
+.dropdown-toggle {
+  border: 1px solid $yellow-ish;
   border-radius: 10px;
+
+  &:hover {
+    background-color: $blue-ish;
+    border: 1px solid $yellow-ish;
+    color: $yellow-ish;
+  }
 }
 
 .dropdown-menu {
@@ -70,15 +93,35 @@ small {
 }
 
 .list-group-item {
-  border-radius: 0;
+  color: $blue-ish;
+  background-color: $yellow-ish;
+  border-radius: .25rem;
   height: 3.5em;
+  margin-top: .5rem;
   width: 100%;
+
+  &:hover {
+    background-color: $blue-ish;
+    color: $yellow-ish;
+  }
+}
+
+.navbar {
+  background-color: $blue-ish;
 }
 
 .nav-link {
-  color: #343a40;
+  color: $blue-ish;
+}
+
+.top-message {
+  text-align: center;
 }
 
 .user-message {
-  color: #ffc107;
+  color: $yellow-ish;
+}
+
+.welcome {
+  width: 100vw;
 }
