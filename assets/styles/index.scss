@@ -4,6 +4,10 @@ $blue-ish: #4c6dff;
 $yellow-ish: #ffcc4c;
 $red-ish: #ff734c;
 
+a {
+  color: $yellow-ish;
+}
+
 body {
   background: url('public/travel.jpg');
   background-size: cover;
@@ -125,5 +129,6 @@ small {
 }
 
 .welcome {
+  color: $yellow-ish;
   width: 100vw;
 }
