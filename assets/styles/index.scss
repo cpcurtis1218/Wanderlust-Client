@@ -12,9 +12,23 @@ small {
   display: flex;
 }
 
+.dest-btns {
+  justify-content: space-between;
+  align-items: center;
+}
+
 .container {
   float: right;
   width: 70%;
+}
+
+.dd-btn {
+  background-color: yellow;
+  color: #343a40;
+
+  &hover {
+    background-color: white;
+  }
 }
 
 .dest-area {
@@ -32,12 +46,21 @@ small {
 }
 
 .dropdown-item {
-  padding: 1;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-bottom: .5em;
+  padding: .5em;
 }
 
 .dropdown-toggle,
-.sign-out-button {
+.sign-out-button,
+.delete-btn {
   border-radius: 10px;
+}
+
+.dropdown-menu {
+  justify-content: center;
+  padding: .5em;
 }
 
 .list-group {

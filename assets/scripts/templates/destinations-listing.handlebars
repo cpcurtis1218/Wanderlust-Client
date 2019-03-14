@@ -8,25 +8,25 @@
     <p class="dest-info row m-0"> {{destination.note}} </p>
     <p class="dest-label row m-0"> <small>Contact:</small> </p>
     <p class="dest-info row m-0"> {{destination.contact}} </p>
-    <div class="d-flex">
-      <div class="dropdown pt-2">
+    <div class="d-flex dest-btns">
+      <div class="dropdown">
         <button class="dropdown-toggle btn-secondary" type="button" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Update
         </button>
         <div class="dropdown-menu">
-          <form class="update-form p-2">
+          <form class="update-form">
             <input type="text" name="destination[id]" class="d-none" value="{{destination.id}}">
             <input class="dropdown-item" required name="destination[location]" type="text" value="{{destination.location}}">
             <input class="dropdown-item" name="destination[note]" type="text" value="{{destination.note}}">
             <input class="dropdown-item" name="destination[contact]" type="text" value="{{destination.contact}}">
-            <input class="dropdown-item" type="submit" value="Update"></input>
+            <input class="dropdown-item dd-btn" type="submit" value="Update">
           </form>
         </div>
       </div>
       <div class="">
-        <form class="delete-form p-2">
+        <form class="delete-form">
           <input type="text" name="destination[id]" class="d-none" value="{{destination.id}}">
-          <button class="delete-btn btn-danger" type="submit">Delete</button>
+          <input class="delete-btn btn-outline-danger" type="submit" value="Delete">
         </form>
       </div>
     </div>
