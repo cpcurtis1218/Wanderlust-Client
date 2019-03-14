@@ -11,11 +11,13 @@ const resetMessage = function () {
 
 const addLocationSuccess = () => {
   $('#resource-message').text('Location Added!')
+  $('#add-location').trigger('reset')
   resetMessage()
 }
 
 const addLocationFailure = () => {
   $('#resource-message').text('Something went wrong.')
+  $('#add-location').trigger('reset')
   resetMessage()
 }
 
