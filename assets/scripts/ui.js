@@ -22,7 +22,7 @@ const addLocationFailure = () => {
 }
 
 const indexLocationsSuccess = (responseData) => {
-  $('#resource-message').text('Showing Index')
+  $('#resource-message').text('Showing Destinations')
   const showDestinationsHtml = showDestinationsTemplate({ destinations: responseData.destinations })
   $('.content').html('').html(showDestinationsHtml)
   resetMessage()
