@@ -6,7 +6,7 @@ const showDestinationsTemplate = require('./templates/destinations-listing.handl
 const resetMessage = function () {
   setTimeout(() => {
     $('#resource-message').text('')
-  }, 5000)
+  }, 2000)
 }
 
 const addLocationSuccess = () => {
@@ -36,7 +36,7 @@ const updateLocationsSuccess = (responseData) => {
 
 const indexLocationsFailure = (responseData) => {
   $('#resource-message').text('Something Went Wrong!')
-  console.log('error response data is ' + responseData)
+  // console.log('error response data is ' + responseData)
   resetMessage()
 }
 
@@ -47,7 +47,7 @@ const updateDestinationSuccess = () => {
 
 const updateDestinationFailure = (responseData) => {
   $('#resource-message').text('Something Went Wrong!')
-  console.log(responseData)
+  // console.log(responseData)
   resetMessage()
 }
 
@@ -57,7 +57,7 @@ const deleteDestinationSuccess = () => {
 
 const deleteDestinationFailure = (responseData) => {
   $('#resource-message').text('Something Went Wrong!')
-  console.log(responseData)
+  // console.log(responseData)
   resetMessage()
 }
 
