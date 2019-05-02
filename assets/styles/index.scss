@@ -10,7 +10,8 @@ a {
 
 body {
   background: url('public/travel.jpg');
-  background-size: fill;
+  background-attachment: fixed;
+  background-size: cover;
   height: 200vh;
 }
 
