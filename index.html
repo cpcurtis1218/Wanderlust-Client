@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Wanderlust</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <nav class="navbar navbar-default navbar-static-top">
+        <a class="navbar-brand mr-0" href="#"><h3>Wanderlust</h3></a>
+        <div class="nav-item user-message" id="user-message"></div>
+        <div class="nav-item auth-area pr-3 btn-group">
+          <div class="unsecure dropdown m-1">
+            <a class="nav-link dropdown-toggle btn-warning" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sign Up
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <form id="sign-up-form" class="auth-form">
+                <input class="dropdown-item" required name="credentials[email]" type="email" placeholder="email">
+                <input class="dropdown-item" required name="credentials[password]" type="password" placeholder="password">
+                <input class="dropdown-item" required name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
+                <input class="dropdown-item dd-btn" type="submit" value="Sign Up">
+              </form>
+            </div>
+          </div>
+          <div class="unsecure dropdown m-1">
+            <a class="nav-link dropdown-toggle btn-warning" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sign In
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <form id="sign-in-form" class="auth-form">
+                <input class="dropdown-item" required type="email" name="credentials[email]" placeholder="email">
+                <input class="dropdown-item" required name="credentials[password]" type="password" placeholder="password">
+                <input class="dropdown-item dd-btn" type="submit" value="Sign In">
+              </form>
+            </div>
+          </div>
+          <div class="secure dropdown m-1">
+            <a class="nav-link dropdown-toggle btn-warning" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Change Password
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <form id="change-password-form" class="auth-form">
+                <input class="dropdown-item" required type="password" name="passwords[old]" placeholder="current password">
+                <input class="dropdown-item" required type="password" name="passwords[new]" placeholder="new password">
+                <input class="dropdown-item dd-btn" type="submit" value="Change Password">
+              </form>
+            </div>
+          </div>
+          <div class="secure m-1">
+            <form id="sign-out">
+              <input class="sign-out-button btn-danger nav-link" id="sign-out-btn" type="submit" value="Sign Out">
+            </form>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="container">
+          <div class="row mt-2">
+            <h5 class="welcome col-6 top-message">Welcome to Wanderlust!</h5>
+            <h5 class="resource-message col-6 top-message" id="resource-message"></h5>
+          </div>
+        </div>
+        <section class="destinations container">
+          <div class="content row justify-content-around" id="content">
+          </div>
+        </section>
+        <section class="destinations list-group">
+          <form id="index-locations">
+            <input class="list-group-item" type="submit" value="My Destinations">
+          </form>
+          <div class="dropdown">
+            <button class="list-group-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Add Destination
+            </button>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <form id="add-location" class="">
+                <label for="new-location"><small>Location</small></label>
+                <input required class="dropdown-item" id="new-location" name="location" type="text" placeholder="Location">
+                <label for="new-note"><small>Note</small></label>
+                <input class="dropdown-item" id="new-note" name="note" type="text" placeholder="Note">
+                <label for="new-contact"><small>Contact</small></label>
+                <input class="dropdown-item" id="new-contact" name="contact" type="text" placeholder="Contact">
+                <input class="dropdown-item dd-btn" type="submit" value="Add Location">
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </body>
+</html>
